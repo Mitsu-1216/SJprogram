@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.JavaBeans;
 import model.Logic;
 
-@WebServlet("/Index")
+@WebServlet("/ProgramServlet")
 public class ProgramServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,7 +44,7 @@ public class ProgramServlet extends HttpServlet {
 		application.setAttribute("site", site);
 
 		// フォワード
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Index.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/program.jsp");
 		dispatcher.forward(request, response);
 	}
 
