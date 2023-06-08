@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Site;
-import model.SiteLogic;
+import model.JavaBeans;
+import model.Logic;
 
 @WebServlet("/Index")
-public class Index extends HttpServlet {
+public class ProgramServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -22,18 +22,18 @@ public class Index extends HttpServlet {
 		
 		// アプリケーションスコープに保存されたサイトの評価を取得
 		ServletContext application = this.getServletContext();
-		Site site = (Site) application.getAttribute("site");
+		JavaBeans site = (JavaBeans) application.getAttribute("site");
 
 		// サイト評価の初期化
 		if (site == null) {
-			site = new Site();
+			site = new JavaBeans();
 		}
 
 		request.setCharacterEncoding("UTF-8");
 		String action = request.getParameter("action");
 
 		// サイトの評価処理
-		SiteLogic siteLogic = new SiteLogic();
+		Logic siteLogic = new Logic();
 		if (action != null && action.equals("like")) {
 			siteLogic.like(site);
 		} else if (action != null && action.equals("dislike")) {

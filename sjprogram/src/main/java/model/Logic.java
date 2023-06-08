@@ -1,12 +1,12 @@
 package model;
 
-public class SiteLogic {
-	public void like(Site site) {
+public class Logic {
+	public void like(JavaBeans site) {
 		int count = site.getLike();
 		site.setLike(count + 1);
 	}
 
-	public void dislike(Site site) {
+	public void dislike(JavaBeans site) {
 		int count = site.getDislike();
 		site.setDislike(count + 1);
 	}

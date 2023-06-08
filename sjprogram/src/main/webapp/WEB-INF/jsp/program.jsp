@@ -8,7 +8,7 @@ Site site =(Site) application.getAttribute("site");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ページ</title>
+<title>Todoアプリ</title>
 </head>
 <body>
 <h1>ようこそ!</h1>

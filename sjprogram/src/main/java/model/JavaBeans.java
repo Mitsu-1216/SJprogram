@@ -2,11 +2,11 @@ package model;
 
 import java.io.Serializable;
 
-public class javaBeans implements Serializable {
+public class JavaBeans implements Serializable {
 	private int like;
 	private int dislike;
 
-	public Site() {
+	public JavaBeans() {
 		like = 0;
 		dislike = 0;
 	}
